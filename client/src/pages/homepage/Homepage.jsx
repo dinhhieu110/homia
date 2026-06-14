@@ -1,4 +1,4 @@
-import Searchbar from "../../components/searchbar/Searchbar"
+import Searchbar from "../../components/shared/searchbar/Searchbar"
 import "./homepage.scss"
 const Homepage = () => {
   return (
@@ -16,15 +16,15 @@ const Homepage = () => {
           <div className="boxes">
             <div className="box">
               <h1>16+</h1>
-              <h2>Years of experiences</h2>
+              <h2>Năm Kinh Nghiệm</h2>
             </div>
             <div className="box">
               <h1>200</h1>
-              <h2>Award Gained</h2>
+              <h2>Giải Thưởng</h2>
             </div>
             <div className="box">
               <h1>1200+</h1>
-              <h2>Property Ready</h2>
+              <h2>Tài Sản Đã Bán</h2>
             </div>
           </div>
         </div>

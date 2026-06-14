@@ -4,10 +4,12 @@ import "./searchbar.scss"
 
 const typeButtons = [
   {
-    name: "buy"
+    name: "buy",
+    value: "Mua",
   },
   {
-    name: "rent"
+    name: "rent",
+    value: "Thuê"
   }
 ]
 
@@ -31,7 +33,7 @@ const Searchbar = () => {
           className={btn.name === query.type ? "active" : ""}
           onClick={() => switchType(btn.name)}
         >
-          {btn.name}</button>))}
+          {btn.value}</button>))}
       </div>
       <form>
         <input type="text" name="location" placeholder="Vị Trí" />

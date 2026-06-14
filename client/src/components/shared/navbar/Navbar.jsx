@@ -9,8 +9,8 @@ const Navbar = () => {
           <img src="/logo.png" alt="" />
           <span>Homia</span>
         </a>
-        <a href="/">Nhà Đẹp</a>
-        <a href="/">Đất Tốt</a>
+        <a href="/product-list">Nhà Đẹp</a>
+        <a href="/product-list">Đất Tốt</a>
         <a href="/">Chúng Tôi</a>
         <a href="/">Hỗ Trợ</a>
       </div>
