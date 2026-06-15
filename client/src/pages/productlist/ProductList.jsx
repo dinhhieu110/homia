@@ -1,8 +1,8 @@
 import "./productlist.scss"
 import Filter from "../../components/shared/filter/Filter"
 import Card from "../../components/shared/card/Card"
-import { dummyData } from "./dummyData"
-import Map from "../../components/map/Map"
+import Map from "../../components/shared/map/Map"
+import { dummyData } from "../../libs/dummyData"
 
 
 const ProductList = () => {
