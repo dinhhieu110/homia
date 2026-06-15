@@ -55,3 +55,36 @@ export const dummyData = [
     longitude: 108.2475
   }
 ];
+
+export const singlePost = {
+  id: 5,
+  title: "Nhà vườn rộng gần khu công nghệ cao",
+  img: "https://picsum.photos/800/600?random=5",
+  images: [
+    "https://picsum.photos/800/600?random=51",
+    "https://picsum.photos/800/600?random=52",
+    "https://picsum.photos/800/600?random=53",
+    "https://images.unsplash.com/photo-1600585154526-990dced4db0d"
+  ],
+  description: `Bán nhà vườn đẹp tại Liên Chiểu, Đà Nẵng.
+- Diện tích rộng, sân vườn thoáng mát.
+- 4 phòng ngủ, 3 phòng tắm, phòng khách rộng.
+- Thiết kế hiện đại, nội thất cơ bản.
+- Đường ô tô vào tận nhà.
+- Cách Khu Công nghệ cao Đà Nẵng chỉ 5 phút di chuyển.
+- Gần trường học, chợ, bệnh viện và các tiện ích xung quanh.
+
+Pháp lý rõ ràng, sổ hồng chính chủ. Thích hợp để ở, nghỉ dưỡng hoặc đầu tư lâu dài.`,
+  bedRoom: 4,
+  bathRoom: 3,
+  price: 5200000000,
+  address: "Liên Chiểu, Đà Nẵng",
+  latitude: 16.1004,
+  longitude: 108.1176,
+}
+
+export const userData = {
+  id: 1,
+  name: "Trần Đình Hiệu",
+  img: "https://lh3.googleusercontent.com/a/ACg8ocKZkSWSU6ul6jLjlLHSa83llK0bV-bRgAbi-7ac1kh414pvhUU=s432-c-no"
+}
