@@ -12,13 +12,11 @@
   .details {
     flex: 3;
     height: 100%;
-    overflow-y: scroll;
 
     @include md {
       flex: none;
       height: max-content;
       margin-bottom: 50px;
-      overflow-y: hidden;
     }
 
     .wrapper {
@@ -90,13 +88,11 @@
     flex: 2;
     background-color: #fcf5f3;
     height: 100%;
-    overflow-y: scroll;
 
     @include md {
       flex: none;
       height: max-content;
       margin-bottom: 50px;
-      overflow-y: hidden;
     }
 
 

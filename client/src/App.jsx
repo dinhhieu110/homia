@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProductList from "./pages/productlist/ProductList";
 import Product from "./pages/product/Product"
 import Layout from "./pages/layout/Layout";
+import Profile from "./pages/profile/Profile";
 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
         {
           path: "/product/:id",
           element: <Product />
+        },
+        {
+          path: "/profile",
+          element: <Profile />
         }
       ]
     },
