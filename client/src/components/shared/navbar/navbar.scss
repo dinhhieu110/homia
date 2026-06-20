@@ -217,18 +217,8 @@ nav {
           }
 
           &.name {
-            font-size: 15px;
-            padding: 12px 16px 14px;
-
-            svg:first-child {
+            svg {
               color: var(--color-accent);
-            }
-
-            .chevron {
-              margin-left: auto;
-              color: var(--color-text-disabled);
-              width: 13px;
-              height: 13px;
             }
 
             &:hover {

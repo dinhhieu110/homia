@@ -23,11 +23,11 @@ const Homepage = () => {
               <h2>{t("homepage.yearsExperience")}</h2>
             </div>
             <div className="box">
-              <h1>200</h1>
+              <h1>10</h1>
               <h2>{t("homepage.awards")}</h2>
             </div>
             <div className="box">
-              <h1>1200+</h1>
+              <h1>2002+</h1>
               <h2>{t("homepage.propertiesSold")}</h2>
             </div>
           </div>

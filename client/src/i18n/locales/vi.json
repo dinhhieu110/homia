@@ -6,6 +6,7 @@
     "support": "Hỗ Trợ",
     "login": "Đăng Nhập",
     "register": "Đăng Ký",
+    "messages": "Tin nhắn",
     "changePassword": "Đổi mật khẩu",
     "logout": "Đăng xuất"
   },
@@ -77,6 +78,13 @@
   "chat": {
     "messages": "Tin Nhắn",
     "send": "Gửi"
+  },
+  "chatPage": {
+    "tabMessages": "Tin nhắn",
+    "tabAI": "AI Agent",
+    "placeholder": "Nhập tin nhắn...",
+    "aiPlaceholder": "Hỏi AI về bất động sản...",
+    "kpiTitle": "Phân tích thị trường"
   },
   "pin": {
     "bedrooms": "phòng ngủ"

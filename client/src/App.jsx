@@ -4,6 +4,7 @@ import ProductList from "./pages/productlist/ProductList";
 import Product from "./pages/product/Product"
 import Layout from "./pages/layout/Layout";
 import Profile from "./pages/profile/Profile";
+import ChatPage from "./pages/chat/ChatPage";
 
 
 function App() {
@@ -30,6 +31,10 @@ function App() {
         {
           path: "/profile",
           element: <Profile />
+        },
+        {
+          path: "/chat",
+          element: <ChatPage />
         }
       ]
     },

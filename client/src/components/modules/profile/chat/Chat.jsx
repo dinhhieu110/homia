@@ -21,31 +21,6 @@ const Chat = () => {
           <span>{userData.name}</span>
           <p>Xin chào, tôi là Hiệu!</p>
         </div>
-        <div className="message">
-          <img src={userData.img} alt="" />
-          <span>{userData.name}</span>
-          <p>Xin chào, tôi là Hiệu!</p>
-        </div>
-        <div className="message">
-          <img src={userData.img} alt="" />
-          <span>{userData.name}</span>
-          <p>Xin chào, tôi là Hiệu!</p>
-        </div>
-        <div className="message">
-          <img src={userData.img} alt="" />
-          <span>{userData.name}</span>
-          <p>Xin chào, tôi là Hiệu!</p>
-        </div>
-        <div className="message">
-          <img src={userData.img} alt="" />
-          <span>{userData.name}</span>
-          <p>Xin chào, tôi là Hiệu!</p>
-        </div>
-        <div className="message">
-          <img src={userData.img} alt="" />
-          <span>{userData.name}</span>
-          <p>Xin chào, tôi là Hiệu!</p>
-        </div>
       </div>
       {chat && (
         <div className="chatBox">

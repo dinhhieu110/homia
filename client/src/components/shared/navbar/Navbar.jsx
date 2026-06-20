@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import "./navbar.scss"
 import { userData } from "../../../libs/dummyData"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import LanguageSwitcher from "../languageSwitcher/LanguageSwitcher"
 import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher"
 
@@ -34,14 +34,14 @@ const Navbar = () => {
   return (
     <nav className={scrolled ? "scrolled" : ""}>
       <div className="left">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img src="/logo.png" alt="" />
           <span>Homia</span>
-        </a>
-        <a href="/product-list">{t("navbar.niceHouses")}</a>
-        <a href="/product-list">{t("navbar.goodLand")}</a>
-        <a href="/">{t("navbar.aboutUs")}</a>
-        <a href="/">{t("navbar.support")}</a>
+        </Link>
+        <Link to="/product-list">{t("navbar.niceHouses")}</Link>
+        <Link to="/product-list">{t("navbar.goodLand")}</Link>
+        <Link to="/">{t("navbar.aboutUs")}</Link>
+        <Link to="/">{t("navbar.support")}</Link>
       </div>
 
       <div className="right">
@@ -71,9 +71,16 @@ const Navbar = () => {
                     <circle cx="12" cy="7" r="4"/>
                   </svg>
                   <span>{userData.name}</span>
-                  <svg className="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="9 18 15 12 9 6"/>
+                </button>
+
+                <button
+                  className="popupItem"
+                  onClick={() => { navigate("/chat"); setOpenProfile(false) }}
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                   </svg>
+                  <span>{t("navbar.messages")}</span>
                 </button>
 
                 <button className="popupItem password">
@@ -99,8 +106,8 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            <a href="/">{t("navbar.login")}</a>
-            <a href="/" className="register">{t("navbar.register")}</a>
+            <Link to="/">{t("navbar.login")}</Link>
+            <Link to="/" className="register">{t("navbar.register")}</Link>
           </>
         )}
 
@@ -109,12 +116,12 @@ const Navbar = () => {
         </div>
         <div className={openMenu ? "menu active" : "menu"}>
           <button className="closeBtn" onClick={() => setOpenMenu(false)}>✕</button>
-          <a href="/">{t("navbar.niceHouses")}</a>
-          <a href="/">{t("navbar.goodLand")}</a>
-          <a href="/">{t("navbar.aboutUs")}</a>
-          <a href="/">{t("navbar.support")}</a>
-          <a href="/">{t("navbar.login")}</a>
-          <a href="/">{t("navbar.register")}</a>
+          <Link to="/product-list">{t("navbar.niceHouses")}</Link>
+          <Link to="/product-list">{t("navbar.goodLand")}</Link>
+          <Link to="/">{t("navbar.aboutUs")}</Link>
+          <Link to="/">{t("navbar.support")}</Link>
+          <Link to="/">{t("navbar.login")}</Link>
+          <Link to="/">{t("navbar.register")}</Link>
         </div>
       </div>
     </nav>

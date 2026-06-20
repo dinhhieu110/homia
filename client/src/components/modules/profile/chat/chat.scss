@@ -12,18 +12,18 @@
 
     h1 {
       font-weight: 400;
+      color: var(--color-text-primary);
     }
 
-
-
     .message {
-      background-color: #fff;
+      background-color: var(--color-surface);
       padding: 20px;
       border-radius: 10px;
       display: flex;
       align-items: center;
       gap: 20px;
       cursor: pointer;
+      color: var(--color-text-primary);
 
       img {
         width: 40px;
@@ -34,24 +34,33 @@
 
       span {
         font-weight: bold;
+        color: var(--color-text-primary);
+      }
+
+      p {
+        color: var(--color-text-secondary);
       }
     }
   }
 
   .chatBox {
     flex: 1;
-    background-color: #fff;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     .top {
-      background-color: rgba(192, 85, 42, 0.15);
+      background-color: var(--color-accent-tint);
       padding: 20px;
       font-weight: bold;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      border-radius: 10px 10px 0 0;
+      color: var(--color-text-primary);
 
       .user {
         display: flex;
@@ -68,6 +77,7 @@
 
       .close {
         cursor: pointer;
+        color: var(--color-text-secondary);
       }
     }
 
@@ -81,6 +91,7 @@
 
       .chatMessage {
         width: 50%;
+        color: var(--color-text-primary);
 
         &.own {
           align-self: flex-end;
@@ -89,14 +100,16 @@
 
         span {
           font-size: 12px;
-          background-color: rgba(211, 133, 102, 0.15);
+          background-color: var(--color-accent-tint);
+          color: var(--color-text-secondary);
           border-radius: 5px;
+          padding: 2px 6px;
         }
       }
     }
 
     .bottom {
-      border-top: 2px solid rgba(192, 85, 42, 0.15);
+      border-top: 2px solid var(--color-border);
       height: 60px;
       display: flex;
       align-items: center;
@@ -107,14 +120,31 @@
         height: 100%;
         border: none;
         padding: 20px;
+        background-color: var(--color-bg);
+        color: var(--color-text-primary);
+        resize: none;
+        outline: none;
+        border-radius: 0 0 0 10px;
+
+        &::placeholder {
+          color: var(--color-text-muted);
+        }
       }
 
       button {
         flex: 1;
         height: 100%;
-        background-color: rgba(192, 85, 42, 0.15);
+        background-color: var(--color-accent-tint);
+        color: var(--color-text-primary);
         border: none;
         cursor: pointer;
+        border-radius: 0 0 10px 0;
+        font-weight: 600;
+
+        &:hover {
+          background-color: var(--color-accent);
+          color: #fff;
+        }
       }
     }
   }

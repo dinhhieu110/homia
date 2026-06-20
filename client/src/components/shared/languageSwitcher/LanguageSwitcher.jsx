@@ -5,7 +5,11 @@ const LanguageSwitcher = () => {
   const { i18n } = useTranslation()
   const isVI = i18n.language === "vi"
 
-  const toggle = () => i18n.changeLanguage(isVI ? "en" : "vi")
+  const toggle = () => {
+    const next = isVI ? "en" : "vi"
+    i18n.changeLanguage(next)
+    localStorage.setItem('homia_lang', next)
+  }
 
   return (
     <button
