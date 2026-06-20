@@ -38,6 +38,10 @@
       color: #444;
       transition: all 0.4s ease;
 
+      @include sm {
+        font-size: 16px;
+      }
+
       &:hover {
         color: #000;
         scale: 1.01;

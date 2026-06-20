@@ -9,6 +9,7 @@ const Navbar = () => {
   const { t } = useTranslation()
   const [openMenu, setOpenMenu] = useState(false)
   const [openProfile, setOpenProfile] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const popupRef = useRef(null)
   const navigate = useNavigate()
   const user = true
@@ -23,8 +24,14 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 0)
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <nav>
+    <nav className={scrolled ? "scrolled" : ""}>
       <div className="left">
         <a href="/" className="logo">
           <img src="/logo.png" alt="" />

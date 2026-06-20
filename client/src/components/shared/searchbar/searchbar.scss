@@ -13,6 +13,12 @@
       cursor: pointer;
       text-transform: capitalize;
       border-bottom: none;
+      font-size: 15px;
+
+      @include sm {
+        padding: 12px 20px;
+        font-size: 13px;
+      }
 
       &.active {
         background-color: #c0552a;

@@ -1,11 +1,21 @@
 @use "../../../responsive.scss" as *;
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
   font-size: 20px;
+
+  &.scrolled {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
 
   @include md {
     font-size: 16px;
@@ -28,6 +38,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 38px;
+    margin-right: 10px;
   }
 
   .logo {
@@ -241,9 +252,9 @@ nav {
     }
 
     .menu {
-      position: absolute;
+      position: fixed;
       top: 0;
-      right: -50%;
+      right: -200%;
       background: black;
       color: white;
       height: 100vh;
