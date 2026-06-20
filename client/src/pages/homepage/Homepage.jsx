@@ -1,6 +1,11 @@
 import Searchbar from "../../components/shared/searchbar/Searchbar"
 import "./homepage.scss"
+
+const FOUNDING_YEAR = 2026
+
 const Homepage = () => {
+  const yearsOfExperience = new Date().getFullYear() - FOUNDING_YEAR + 1
+
   return (
     <div className="homepage">
       <div className="textContainer">
@@ -15,7 +20,7 @@ const Homepage = () => {
           <Searchbar />
           <div className="boxes">
             <div className="box">
-              <h1>16+</h1>
+              <h1>{yearsOfExperience}+</h1>
               <h2>Năm Kinh Nghiệm</h2>
             </div>
             <div className="box">

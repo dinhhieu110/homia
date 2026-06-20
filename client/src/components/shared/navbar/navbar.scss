@@ -55,9 +55,11 @@ nav {
     justify-content: flex-end;
     background-color: #fcf5f3;
     height: 100%;
+    padding-right: 8px;
 
     @include sm {
       background-color: transparent;
+      padding-right: 0;
     }
 
     a {
@@ -65,55 +67,148 @@ nav {
       margin: 10px;
     }
 
+    // ── Avatar + popup ───────────────────────────────────
     .user {
+      position: relative;
       display: flex;
       align-items: center;
-      font-weight: bold;
+      z-index: 9999;
 
-      img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 20px;
-      }
-
-      span {
-        @include sm {
-          display: none;
-        }
-      }
-
-      .profile {
-        padding: 12px 24px;
-        background-color: #c0552a;
-        cursor: pointer;
-        border: none;
-        color: white;
+      .avatarWrapper {
         position: relative;
-        overflow: hidden;
+        cursor: pointer;
 
-        .notification {
-          position: absolute;
-          top: -8px;
-          right: -8px;
-          background-color: #fff;
-          color: #c0552a;
-          font-size: 11px;
-          font-weight: bold;
+        img {
+          width: 46px;
+          height: 46px;
           border-radius: 50%;
-          width: 26px;
-          height: 26px;
+          object-fit: cover;
+          border: 2.5px solid transparent;
+          transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+          display: block;
+
+          &:hover {
+            border-color: #c0552a;
+            transform: scale(1.05);
+            box-shadow: 0 0 0 4px rgba(192, 85, 42, 0.15);
+          }
+        }
+
+        .badge {
+          position: absolute;
+          top: -3px;
+          right: -3px;
+          background-color: #c0552a;
+          color: white;
+          font-size: 10px;
+          font-weight: 700;
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
           display: flex;
           align-items: center;
           justify-content: center;
+          border: 2px solid #fcf5f3;
+          pointer-events: none;
+        }
+      }
+
+      // ── Popup card ─────────────────────────────────────
+      .profilePopup {
+        position: absolute;
+        top: calc(100% + 16px);
+        right: 0;
+        background: white;
+        border-radius: 14px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
+        min-width: 210px;
+        padding: 6px 0 8px;
+        z-index: 200;
+        animation: popupIn 0.18s ease;
+
+        .popupArrow {
+          position: absolute;
+          top: -6px;
+          right: 18px;
+          width: 12px;
+          height: 12px;
+          background: white;
+          transform: rotate(45deg);
+          border-radius: 2px 0 0 0;
+          box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .popupItem {
+          display: flex;
+          align-items: center;
+          gap: 11px;
+          padding: 10px 16px;
+          margin: 0;
+          width: 100%;
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 14px;
+          color: #2d2d2d;
+          text-align: left;
+          font-family: "Lato", sans-serif;
+          transition: background-color 0.15s ease;
+
+          svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+            color: #aaa;
+          }
+
+          &:hover {
+            background-color: #f8f8f8;
+          }
+
+          &.name {
+            font-size: 15px;
+            padding: 12px 16px 14px;
+
+            svg:first-child {
+              color: #c0552a;
+            }
+
+            .chevron {
+              margin-left: auto;
+              color: #ccc;
+              width: 13px;
+              height: 13px;
+            }
+
+            &:hover {
+              background-color: #fff8f6;
+            }
+          }
+
+          &.logout {
+            color: #d94f4f;
+
+            svg {
+              color: #d94f4f;
+            }
+
+            &:hover {
+              background-color: #fff5f5;
+            }
+          }
+        }
+
+        .popupDivider {
+          height: 1px;
+          background-color: #f0f0f0;
+          margin: 4px 0;
         }
       }
     }
 
     .register {
       background: black;
-      color: white
+      color: white;
     }
 
     .menuIcon {
@@ -184,5 +279,17 @@ nav {
         }
       }
     }
+  }
+}
+
+@keyframes popupIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
