@@ -67,6 +67,15 @@ nav {
       margin: 10px;
     }
 
+    // ── Language switcher ────────────────────────────────
+    .langSwitcher {
+      margin-right: 8px;
+
+      @include sm {
+        display: none;
+      }
+    }
+
     // ── Avatar + popup ───────────────────────────────────
     .user {
       position: relative;
@@ -157,7 +166,7 @@ nav {
           font-size: 14px;
           color: #2d2d2d;
           text-align: left;
-          font-family: "Lato", sans-serif;
+          font-family: "Be Vietnam Pro", sans-serif;
           transition: background-color 0.15s ease;
 
           svg {

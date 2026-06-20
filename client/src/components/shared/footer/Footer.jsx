@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next"
 import "./footer.scss"
 import { Link } from "react-router-dom"
 
 const FOUNDING_YEAR = 2026
 
 const Footer = () => {
+  const { t } = useTranslation()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -18,7 +20,7 @@ const Footer = () => {
               <img src="/logo.png" alt="Homia" />
               <span>Homia</span>
             </div>
-            <p>Nền tảng bất động sản uy tín, kết nối hàng triệu người mua và bán trên khắp Việt Nam.</p>
+            <p>{t("footer.brandDesc")}</p>
             <div className="socials">
               <a href="/" aria-label="Facebook" className="socialBtn">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -34,33 +36,33 @@ const Footer = () => {
 
           {/* Properties */}
           <div className="linkGroup">
-            <h4>Bất Động Sản</h4>
+            <h4>{t("footer.realEstate")}</h4>
             <ul>
-              <li><Link to="/product-list">Nhà phố</Link></li>
-              <li><Link to="/product-list">Chung cư cao cấp</Link></li>
-              <li><Link to="/product-list">Biệt thự</Link></li>
-              <li><Link to="/product-list">Đất nền</Link></li>
-              <li><Link to="/product-list">Nhà cho thuê</Link></li>
-              <li><Link to="/product-list">Dự án mới</Link></li>
+              <li><Link to="/product-list">{t("footer.townhouse")}</Link></li>
+              <li><Link to="/product-list">{t("footer.luxuryApartment")}</Link></li>
+              <li><Link to="/product-list">{t("footer.villa")}</Link></li>
+              <li><Link to="/product-list">{t("footer.land")}</Link></li>
+              <li><Link to="/product-list">{t("footer.rentalHouse")}</Link></li>
+              <li><Link to="/product-list">{t("footer.newProject")}</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div className="linkGroup">
-            <h4>Dịch Vụ</h4>
+            <h4>{t("footer.services")}</h4>
             <ul>
-              <li><Link to="/">Định giá BĐS</Link></li>
-              <li><Link to="/">Tư vấn mua bán</Link></li>
-              <li><Link to="/">Hỗ trợ pháp lý</Link></li>
-              <li><Link to="/">Vay vốn ngân hàng</Link></li>
-              <li><Link to="/">Quản lý tài sản</Link></li>
-              <li><Link to="/">Đầu tư sinh lời</Link></li>
+              <li><Link to="/">{t("footer.valuation")}</Link></li>
+              <li><Link to="/">{t("footer.consulting")}</Link></li>
+              <li><Link to="/">{t("footer.legal")}</Link></li>
+              <li><Link to="/">{t("footer.banking")}</Link></li>
+              <li><Link to="/">{t("footer.management")}</Link></li>
+              <li><Link to="/">{t("footer.investment")}</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div className="contactGroup">
-            <h4>Liên Hệ</h4>
+            <h4>{t("footer.contact")}</h4>
             <div className="contactItem">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/>
@@ -77,13 +79,13 @@ const Footer = () => {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>Đà Nẵng, Việt Nam</span>
+              <span>{t("footer.address")}</span>
             </div>
             <div className="contactItem">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
               </svg>
-              <span>Phục vụ 24/7</span>
+              <span>{t("footer.service247")}</span>
             </div>
           </div>
         </div>
@@ -105,12 +107,12 @@ const Footer = () => {
         </div>
 
         <div className="footerBottom">
-          <span>© {currentYear} Homia. Bảo lưu mọi quyền.</span>
-          <span className="craft">Crafted with <span className="heart">♥</span> in Việt Nam</span>
+          <span>© {currentYear} Homia. {t("footer.copyright")}</span>
+          <span className="craft">Crafted with <span className="heart">♥</span> by Wilson Tran</span>
           <div className="bottomLinks">
-            <a href="/">Chính sách</a>
+            <a href="/">{t("footer.policy")}</a>
             <span className="dot">·</span>
-            <a href="/">Điều khoản</a>
+            <a href="/">{t("footer.terms")}</a>
             <span className="dot">·</span>
             <a href="/">Cookie</a>
           </div>

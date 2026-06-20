@@ -1,9 +1,12 @@
 import { useState, useRef, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 import "./navbar.scss"
 import { userData } from "../../../libs/dummyData"
 import { useNavigate } from "react-router-dom"
+import LanguageSwitcher from "../languageSwitcher/LanguageSwitcher"
 
 const Navbar = () => {
+  const { t } = useTranslation()
   const [openMenu, setOpenMenu] = useState(false)
   const [openProfile, setOpenProfile] = useState(false)
   const popupRef = useRef(null)
@@ -27,13 +30,15 @@ const Navbar = () => {
           <img src="/logo.png" alt="" />
           <span>Homia</span>
         </a>
-        <a href="/product-list">Nhà Đẹp</a>
-        <a href="/product-list">Đất Tốt</a>
-        <a href="/">Chúng Tôi</a>
-        <a href="/">Hỗ Trợ</a>
+        <a href="/product-list">{t("navbar.niceHouses")}</a>
+        <a href="/product-list">{t("navbar.goodLand")}</a>
+        <a href="/">{t("navbar.aboutUs")}</a>
+        <a href="/">{t("navbar.support")}</a>
       </div>
 
       <div className="right">
+        <LanguageSwitcher />
+
         {user ? (
           <div className="user" ref={popupRef}>
             <div
@@ -67,7 +72,7 @@ const Navbar = () => {
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                   </svg>
-                  <span>Đổi mật khẩu</span>
+                  <span>{t("navbar.changePassword")}</span>
                 </button>
 
                 <div className="popupDivider" />
@@ -78,15 +83,15 @@ const Navbar = () => {
                     <polyline points="16 17 21 12 16 7"/>
                     <line x1="21" y1="12" x2="9" y2="12"/>
                   </svg>
-                  <span>Đăng xuất</span>
+                  <span>{t("navbar.logout")}</span>
                 </button>
               </div>
             )}
           </div>
         ) : (
           <>
-            <a href="/">Đăng Nhập</a>
-            <a href="/" className="register">Đăng Ký</a>
+            <a href="/">{t("navbar.login")}</a>
+            <a href="/" className="register">{t("navbar.register")}</a>
           </>
         )}
 
@@ -95,12 +100,12 @@ const Navbar = () => {
         </div>
         <div className={openMenu ? "menu active" : "menu"}>
           <button className="closeBtn" onClick={() => setOpenMenu(false)}>✕</button>
-          <a href="/">Nhà Đẹp</a>
-          <a href="/">Đất Tốt</a>
-          <a href="/">Chúng Tôi</a>
-          <a href="/">Hỗ Trợ</a>
-          <a href="/">Đăng Nhập</a>
-          <a href="/">Đăng Ký</a>
+          <a href="/">{t("navbar.niceHouses")}</a>
+          <a href="/">{t("navbar.goodLand")}</a>
+          <a href="/">{t("navbar.aboutUs")}</a>
+          <a href="/">{t("navbar.support")}</a>
+          <a href="/">{t("navbar.login")}</a>
+          <a href="/">{t("navbar.register")}</a>
         </div>
       </div>
     </nav>

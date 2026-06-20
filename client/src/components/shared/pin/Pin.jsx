@@ -1,10 +1,12 @@
+import { useTranslation } from "react-i18next"
 import { Marker, Popup } from 'react-leaflet'
 import { Link } from "react-router-dom"
 import './pin.scss'
-import { formatVND } from '../../../../utils/currency'
 import Price from '../price/Price'
 
 const Pin = ({ item }) => {
+  const { t } = useTranslation()
+
   return (
     <Marker position={[item.latitude, item.longitude]}>
       <Popup>
@@ -14,7 +16,7 @@ const Pin = ({ item }) => {
             <Link to={`/${item.id}`}>{item.title}</Link>
           </div>
           <div className="details">
-            <span>{item.bedRoom} phòng ngủ</span>
+            <span>{item.bedRoom} {t("pin.bedrooms")}</span>
             <Price price={item.price} sm />
           </div>
         </div>

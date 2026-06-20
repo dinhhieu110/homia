@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import Slider from "../../components/shared/slider/Slider"
 import "./product.scss"
 import { singlePost, userData } from "../../libs/dummyData"
@@ -5,6 +6,8 @@ import Price from "../../components/shared/price/Price"
 import Map from "../../components/shared/map/Map"
 
 const Product = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="product">
       <div className="details">
@@ -33,31 +36,31 @@ const Product = () => {
       </div>
       <div className="features">
         <div className="wrapper">
-          <p className="title">Thông tin chung</p>
+          <p className="title">{t("product.generalInfo")}</p>
           <div className="listVertical">
             <div className="feature">
               <img src="/utility.png" alt="" />
               <div className="featureText">
-                <span>Tiện ích</span>
-                <p>Người thuê tự chi trả</p>
+                <span>{t("product.utilities")}</span>
+                <p>{t("product.utilitiesValue")}</p>
               </div>
             </div>
             <div className="feature">
               <img src="/pet.png" alt="" />
               <div className="featureText">
-                <span>Thú cưng</span>
-                <p>Cho phép</p>
+                <span>{t("product.pets")}</span>
+                <p>{t("product.petsValue")}</p>
               </div>
             </div>
             <div className="feature">
               <img src="/fee.png" alt="" />
               <div className="featureText">
-                <span>Khoản Phí</span>
-                <p>Tổng thu nhập của hộ gia đình phải gấp ít nhất 3 lần tiền thuê nhà.</p>
+                <span>{t("product.fees")}</span>
+                <p>{t("product.feesValue")}</p>
               </div>
             </div>
           </div>
-          <p className="title">Kích cỡ tài sản</p>
+          <p className="title">{t("product.assetSize")}</p>
           <div className="sizes">
             <div className="size">
               <img src="/size.png" alt="" />
@@ -65,49 +68,49 @@ const Product = () => {
             </div>
             <div className="size">
               <img src="/bed.png" alt="" />
-              <span>2 phòng ngủ</span>
+              <span>2 {t("product.bedrooms")}</span>
             </div>
             <div className="size">
               <img src="/bath.png" alt="" />
-              <span>1 phòng tắm</span>
+              <span>1 {t("product.bathrooms")}</span>
             </div>
           </div>
-          <p className="title">Những địa điểm gần đó</p>
+          <p className="title">{t("product.nearbyPlaces")}</p>
           <div className="listHorizontal">
             <div className="feature">
               <img src="/school.png" alt="" />
               <div className="featureText">
-                <span>Trường học</span>
-                <p> Cách 250m</p>
+                <span>{t("product.school")}</span>
+                <p>{t("product.schoolDistance")}</p>
               </div>
             </div>
             <div className="feature">
               <img src="/pet.png" alt="" />
               <div className="featureText">
-                <span>Trạm xe buýt</span>
-                <p> Cách 150m</p>
+                <span>{t("product.busStop")}</span>
+                <p>{t("product.busStopDistance")}</p>
               </div>
             </div>
             <div className="feature">
               <img src="/fee.png" alt="" />
               <div className="featureText">
-                <span>Nhà hàng</span>
-                <p> Cách 200m</p>
+                <span>{t("product.restaurant")}</span>
+                <p>{t("product.restaurantDistance")}</p>
               </div>
             </div>
           </div>
-          <p className="title">Vị trí</p>
+          <p className="title">{t("product.location")}</p>
           <div className="mapContainer">
             <Map list={[singlePost]} />
           </div>
           <div className="buttons">
             <button>
               <img src="/chat.png" alt="" />
-              Gửi tin nhắn
+              {t("product.sendMessage")}
             </button>
             <button>
               <img src="/save.png" alt="" />
-              Lưu vị trí
+              {t("product.saveLocation")}
             </button>
           </div>
         </div>
