@@ -87,6 +87,12 @@ nav {
           transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
           display: block;
 
+          @include md {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+          }
+
           &:hover {
             border-color: #c0552a;
             transform: scale(1.05);
@@ -240,6 +246,7 @@ nav {
       justify-content: center;
       gap: 24px;
       font-size: 20px;
+      z-index: 9999;
 
       &.active {
         right: 0;
