@@ -1,0 +1,107 @@
+{
+  "navbar": {
+    "niceHouses": "Houses",
+    "goodLand": "Land",
+    "aboutUs": "About Us",
+    "support": "Support",
+    "login": "Login",
+    "register": "Register",
+    "changePassword": "Change Password",
+    "logout": "Logout"
+  },
+  "homepage": {
+    "title": "Your Starting Point For Dream Homes And Valuable",
+    "titleAccent": "Investments",
+    "description": "Discover real estate that suits your needs, from homes and land plots to attractive investment opportunities. Thousands of property listings updated daily. Easily search, compare and connect directly with sellers nationwide.",
+    "yearsExperience": "Years of Experience",
+    "awards": "Awards",
+    "propertiesSold": "Properties Sold"
+  },
+  "searchbar": {
+    "buy": "Buy",
+    "rent": "Rent",
+    "location": "Location",
+    "minPrice": "Min Price",
+    "maxPrice": "Max Price"
+  },
+  "filter": {
+    "searchIn": "Search for real estate in",
+    "location": "Location",
+    "locationPlaceholder": "City Location",
+    "type": "Type",
+    "property": "Property",
+    "minPrice": "Min Price",
+    "maxPrice": "Max Price",
+    "bedroom": "Bedrooms",
+    "any": "Any",
+    "buy": "Buy",
+    "rent": "Rent",
+    "apartment": "Apartment",
+    "house": "House",
+    "condo": "Condo",
+    "land": "Land",
+    "anyPlaceholder": "Any"
+  },
+  "product": {
+    "generalInfo": "General Information",
+    "assetSize": "Property Sizes",
+    "nearbyPlaces": "Nearby Places",
+    "location": "Location",
+    "utilities": "Utilities",
+    "utilitiesValue": "Tenant pays own utilities",
+    "pets": "Pets",
+    "petsValue": "Allowed",
+    "fees": "Fees",
+    "feesValue": "Total household income must be at least 3× the monthly rent.",
+    "school": "School",
+    "schoolDistance": "250m away",
+    "busStop": "Bus Stop",
+    "busStopDistance": "150m away",
+    "restaurant": "Restaurant",
+    "restaurantDistance": "200m away",
+    "bedrooms": "bedrooms",
+    "bathrooms": "bathrooms",
+    "sendMessage": "Send Message",
+    "saveLocation": "Save Location"
+  },
+  "profile": {
+    "userInfo": "User Information",
+    "updateInfo": "Update Info",
+    "avatar": "Avatar",
+    "username": "Username",
+    "email": "E-mail",
+    "myListings": "My Listings",
+    "addPost": "Add Post",
+    "savedListings": "Saved Listings"
+  },
+  "chat": {
+    "messages": "Messages",
+    "send": "Send"
+  },
+  "pin": {
+    "bedrooms": "bedrooms"
+  },
+  "footer": {
+    "brandDesc": "A trusted real estate platform connecting millions of buyers and sellers across Vietnam.",
+    "realEstate": "Real Estate",
+    "townhouse": "Townhouse",
+    "luxuryApartment": "Luxury Apartment",
+    "villa": "Villa",
+    "land": "Land",
+    "rentalHouse": "Rental House",
+    "newProject": "New Projects",
+    "services": "Services",
+    "valuation": "Property Valuation",
+    "consulting": "Buy & Sell Consulting",
+    "legal": "Legal Support",
+    "banking": "Bank Loans",
+    "management": "Property Management",
+    "investment": "Investment Returns",
+    "contact": "Contact",
+    "address": "Da Nang, Vietnam",
+    "service247": "Available 24/7",
+    "copyright": "All rights reserved.",
+    "policy": "Privacy Policy",
+    "terms": "Terms of Use"
+  }
+}

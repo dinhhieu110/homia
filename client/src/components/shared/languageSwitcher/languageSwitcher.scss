@@ -1,0 +1,51 @@
+.langSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px 7px 11px;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #444;
+  letter-spacing: 0.04em;
+  transition: border-color 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease, transform 0.15s ease;
+  white-space: nowrap;
+  user-select: none;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: #888;
+    transition: color 0.22s ease, transform 0.4s ease;
+  }
+
+  .langCode {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1;
+  }
+
+  &:hover {
+    border-color: #c0552a;
+    background: rgba(192, 85, 42, 0.06);
+    color: #c0552a;
+    box-shadow: 0 0 0 3px rgba(192, 85, 42, 0.1);
+    transform: translateY(-1px);
+
+    svg {
+      color: #c0552a;
+      transform: rotate(20deg);
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}

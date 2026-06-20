@@ -1,0 +1,107 @@
+{
+  "navbar": {
+    "niceHouses": "Nhà Đẹp",
+    "goodLand": "Đất Tốt",
+    "aboutUs": "Chúng Tôi",
+    "support": "Hỗ Trợ",
+    "login": "Đăng Nhập",
+    "register": "Đăng Ký",
+    "changePassword": "Đổi mật khẩu",
+    "logout": "Đăng xuất"
+  },
+  "homepage": {
+    "title": "Nơi Khởi Đầu Cho Tổ Ấm Mơ Ước Và Cơ Hội Đầu Tư",
+    "titleAccent": "Giá Trị",
+    "description": "Khám phá những bất động sản phù hợp với nhu cầu của bạn, từ nhà ở, đất nền đến các cơ hội đầu tư sinh lời hấp dẫn. Hàng ngàn tin đăng mua bán nhà đất được cập nhật mỗi ngày. Dễ dàng tìm kiếm, so sánh và kết nối trực tiếp với người bán trên toàn quốc.",
+    "yearsExperience": "Năm Kinh Nghiệm",
+    "awards": "Giải Thưởng",
+    "propertiesSold": "Tài Sản Đã Bán"
+  },
+  "searchbar": {
+    "buy": "Mua",
+    "rent": "Thuê",
+    "location": "Vị Trí",
+    "minPrice": "Giá Thấp Nhất",
+    "maxPrice": "Giá Cao Nhất"
+  },
+  "filter": {
+    "searchIn": "Tìm kiếm bất động sản ở",
+    "location": "Vị Trí",
+    "locationPlaceholder": "Vị Trí Thành Phố",
+    "type": "Hình Thức",
+    "property": "Tài Sản",
+    "minPrice": "Giá trị thấp nhất",
+    "maxPrice": "Giá trị cao nhất",
+    "bedroom": "Số Phòng Ngủ",
+    "any": "Bất Kì",
+    "buy": "Mua",
+    "rent": "Thuê",
+    "apartment": "Căn Hộ",
+    "house": "Nhà",
+    "condo": "Chung Cư",
+    "land": "Đất Đai",
+    "anyPlaceholder": "Bất Kì"
+  },
+  "product": {
+    "generalInfo": "Thông tin chung",
+    "assetSize": "Kích cỡ tài sản",
+    "nearbyPlaces": "Những địa điểm gần đó",
+    "location": "Vị trí",
+    "utilities": "Tiện ích",
+    "utilitiesValue": "Người thuê tự chi trả",
+    "pets": "Thú cưng",
+    "petsValue": "Cho phép",
+    "fees": "Khoản Phí",
+    "feesValue": "Tổng thu nhập của hộ gia đình phải gấp ít nhất 3 lần tiền thuê nhà.",
+    "school": "Trường học",
+    "schoolDistance": "Cách 250m",
+    "busStop": "Trạm xe buýt",
+    "busStopDistance": "Cách 150m",
+    "restaurant": "Nhà hàng",
+    "restaurantDistance": "Cách 200m",
+    "bedrooms": "phòng ngủ",
+    "bathrooms": "phòng tắm",
+    "sendMessage": "Gửi tin nhắn",
+    "saveLocation": "Lưu vị trí"
+  },
+  "profile": {
+    "userInfo": "Thông tin người dùng",
+    "updateInfo": "Cập nhật thông tin",
+    "avatar": "Ảnh đại diện",
+    "username": "Tên người dùng",
+    "email": "E-mail",
+    "myListings": "Danh sách sản phẩm của tôi",
+    "addPost": "Thêm bài đăng",
+    "savedListings": "Danh sách sản phẩm đã lưu"
+  },
+  "chat": {
+    "messages": "Tin Nhắn",
+    "send": "Gửi"
+  },
+  "pin": {
+    "bedrooms": "phòng ngủ"
+  },
+  "footer": {
+    "brandDesc": "Nền tảng bất động sản uy tín, kết nối hàng triệu người mua và bán trên khắp Việt Nam.",
+    "realEstate": "Bất Động Sản",
+    "townhouse": "Nhà phố",
+    "luxuryApartment": "Chung cư cao cấp",
+    "villa": "Biệt thự",
+    "land": "Đất nền",
+    "rentalHouse": "Nhà cho thuê",
+    "newProject": "Dự án mới",
+    "services": "Dịch Vụ",
+    "valuation": "Định giá BĐS",
+    "consulting": "Tư vấn mua bán",
+    "legal": "Hỗ trợ pháp lý",
+    "banking": "Vay vốn ngân hàng",
+    "management": "Quản lý tài sản",
+    "investment": "Đầu tư sinh lời",
+    "contact": "Liên Hệ",
+    "address": "Đà Nẵng, Việt Nam",
+    "service247": "Phục vụ 24/7",
+    "copyright": "Bảo lưu mọi quyền.",
+    "policy": "Chính sách",
+    "terms": "Điều khoản"
+  }
+}
