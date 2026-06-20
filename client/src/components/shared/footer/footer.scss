@@ -1,0 +1,314 @@
+@use "../../../responsive.scss" as *;
+
+.footer {
+  background-color: #191210;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Lato", sans-serif;
+
+  .footerWrapper {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include lg {
+      max-width: 1280px;
+    }
+  }
+
+  // ── Top grid ──────────────────────────────────────────
+  .footerTop {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 48px;
+    padding: 60px 0 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    @include md {
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  // ── Brand column ──────────────────────────────────────
+  .brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 32px;
+        filter: brightness(0) invert(1);
+        opacity: 0.9;
+      }
+
+      span {
+        font-size: 22px;
+        font-weight: 700;
+        color: white;
+        letter-spacing: -0.5px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.55);
+      max-width: 280px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+
+      .socialBtn {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.07);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.6);
+        transition: background 0.2s ease, color 0.2s ease;
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+
+        &:hover {
+          background: #c0552a;
+          color: white;
+        }
+
+        &.zalo span {
+          font-size: 14px;
+          font-weight: 900;
+          letter-spacing: -1px;
+        }
+      }
+    }
+  }
+
+  // ── Link columns ──────────────────────────────────────
+  .linkGroup {
+    h4 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #c0552a;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      li a {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.55);
+        transition: color 0.2s ease, padding-left 0.2s ease;
+        display: inline-block;
+
+        &:hover {
+          color: white;
+          padding-left: 4px;
+        }
+      }
+    }
+  }
+
+  // ── Contact column ────────────────────────────────────
+  .contactGroup {
+    h4 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #c0552a;
+      margin-bottom: 20px;
+    }
+
+    .contactItem {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+
+      svg {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+        margin-top: 2px;
+        color: #c0552a;
+        opacity: 0.8;
+      }
+
+      span {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // ── Signature banner ──────────────────────────────────
+  .signature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    @include sm {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .sigLeft {
+      flex-shrink: 0;
+
+      .monogram {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        border: 2px solid #c0552a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        // Outer dashed ring
+        &::before {
+          content: '';
+          position: absolute;
+          inset: -7px;
+          border-radius: 50%;
+          border: 1px dashed rgba(192, 85, 42, 0.35);
+        }
+
+        span {
+          font-size: 34px;
+          font-weight: 900;
+          color: #c0552a;
+          line-height: 1;
+          letter-spacing: -2px;
+          font-style: italic;
+        }
+      }
+    }
+
+    .sigCenter {
+      text-align: center;
+
+      .quoteVi {
+        font-size: 28px;
+        font-weight: 700;
+        color: white;
+        letter-spacing: -0.5px;
+        font-style: italic;
+
+        @include md {
+          font-size: 22px;
+        }
+      }
+
+      .quoteEn {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.35);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 6px;
+      }
+    }
+
+    .sigRight {
+      flex-shrink: 0;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+
+      @include sm {
+        align-items: center;
+      }
+
+      .sigDivider {
+        width: 48px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #c0552a);
+
+        @include sm {
+          background: linear-gradient(90deg, #c0552a, #c0552a);
+        }
+      }
+
+      .sigTag {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.3);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // ── Bottom bar ────────────────────────────────────────
+  .footerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.3);
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @include sm {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .craft {
+      .heart {
+        color: #c0552a;
+        font-size: 14px;
+      }
+    }
+
+    .bottomLinks {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      a {
+        color: rgba(255, 255, 255, 0.3);
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+
+      .dot {
+        color: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+}
