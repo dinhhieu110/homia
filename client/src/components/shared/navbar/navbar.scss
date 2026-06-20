@@ -216,6 +216,16 @@ nav {
             background-color: var(--color-surface);
           }
 
+          &.messages {
+            svg {
+              color: var(--color-accent);
+            }
+
+            &:hover {
+              background-color: var(--color-accent-bg);
+            }
+          }
+
           &.name {
             svg {
               color: var(--color-accent);
@@ -288,7 +298,9 @@ nav {
         transform: translateY(-1px) !important;
         scale: 1 !important;
 
-        svg { stroke: #fff; }
+        svg {
+          stroke: #fff;
+        }
       }
 
       &:active {

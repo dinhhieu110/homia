@@ -82,7 +82,7 @@ const Navbar = () => {
                 </button>
 
                 <button
-                  className="popupItem"
+                  className="popupItem messages"
                   onClick={() => { navigate("/chat"); setOpenProfile(false) }}
                 >
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
