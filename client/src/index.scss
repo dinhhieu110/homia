@@ -1,3 +1,81 @@
+:root {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #fcf5f3;
+  --color-surface: #f8f8f8;
+  --color-surface-hover: #efefed;
+
+  --color-text-primary: #2d2d2d;
+  --color-text-secondary: #444;
+  --color-text-muted: #888;
+  --color-text-subtle: #aaa;
+  --color-text-disabled: #ccc;
+
+  --color-accent: #c0552a;
+  --color-accent-bg: rgba(192, 85, 42, 0.06);
+  --color-accent-tint: rgba(192, 85, 42, 0.15);
+  --color-accent-ring: rgba(192, 85, 42, 0.1);
+  --color-accent-avatar-ring: rgba(192, 85, 42, 0.15);
+
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-border-strong: rgba(0, 0, 0, 0.25);
+  --color-border-subtle: #f0f0f0;
+
+  --color-popup-bg: #ffffff;
+  --color-popup-shadow: 0 12px 40px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
+  --color-popup-arrow-shadow: -2px -2px 5px rgba(0, 0, 0, 0.05);
+
+  --color-error: #d94f4f;
+  --color-error-bg: #fff5f5;
+
+  --color-badge-border: #fcf5f3;
+  --color-nav-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --color-register-bg: #000000;
+  --color-register-text: #ffffff;
+  --logo-filter: none;
+
+  --color-description: #555;
+  --color-stat-sub: #666;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0f0d0b;
+  --color-bg-secondary: #1a1714;
+  --color-surface: #231f1b;
+  --color-surface-hover: #2d2822;
+
+  --color-text-primary: #ede8df;
+  --color-text-secondary: #c2b9ae;
+  --color-text-muted: #7a7068;
+  --color-text-subtle: #56504a;
+  --color-text-disabled: #3a3530;
+
+  --color-accent: #d4673e;
+  --color-accent-bg: rgba(212, 103, 62, 0.12);
+  --color-accent-tint: rgba(212, 103, 62, 0.18);
+  --color-accent-ring: rgba(212, 103, 62, 0.2);
+  --color-accent-avatar-ring: rgba(212, 103, 62, 0.2);
+
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.18);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  --color-popup-bg: #1e1b17;
+  --color-popup-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
+  --color-popup-arrow-shadow: -2px -2px 5px rgba(0, 0, 0, 0.2);
+
+  --color-error: #e86060;
+  --color-error-bg: rgba(232, 96, 96, 0.1);
+
+  --color-badge-border: #1a1714;
+  --color-nav-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+  --color-register-bg: #ede8df;
+  --color-register-text: #0f0d0b;
+  --logo-filter: brightness(0) invert(1);
+
+  --color-description: #9e9890;
+  --color-stat-sub: #8a8078;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -21,4 +99,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+input, textarea, select {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
 }
