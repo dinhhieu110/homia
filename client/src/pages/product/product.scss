@@ -44,7 +44,7 @@
             display: flex;
             gap: 5px;
             align-items: center;
-            color: #888;
+            color: var(--color-text-muted);
             font-size: 14px;
           }
 
@@ -62,7 +62,7 @@
           gap: 20px;
           padding: 0 10px;
           border-radius: 10px;
-          background-color: rgba(192, 85, 42, 0.15);
+          background-color: var(--color-accent-tint);
           font-weight: 600;
 
           .userName {
@@ -87,7 +87,7 @@
 
   .features {
     flex: 2;
-    background-color: #fcf5f3;
+    background-color: var(--color-bg-secondary);
     height: 100%;
     overflow-y: scroll;
 
@@ -96,7 +96,6 @@
       height: max-content;
       margin-bottom: 50px;
     }
-
 
     .wrapper {
       padding: 0 20px;
@@ -121,7 +120,7 @@
         gap: 10px;
 
         img {
-          background-color: rgba(192, 85, 42, 0.15);
+          background-color: var(--color-accent-tint);
           padding: 2px;
         }
 
@@ -141,7 +140,7 @@
         flex-direction: column;
         gap: 20px;
         padding: 20px 10px;
-        background-color: #fff;
+        background-color: var(--color-bg);
         border-radius: 10px;
       }
 
@@ -149,7 +148,7 @@
         display: flex;
         justify-content: space-between;
         padding: 20px 10px;
-        background-color: #fff;
+        background-color: var(--color-bg);
         border-radius: 10px;
 
         @include lg {
@@ -169,7 +168,7 @@
           display: flex;
           align-items: center;
           gap: 10px;
-          background-color: #fff;
+          background-color: var(--color-bg);
           padding: 10px;
           border-radius: 5px;
         }
@@ -189,10 +188,12 @@
           display: flex;
           align-items: center;
           gap: 5px;
-          background-color: #fff;
-          border: 1px solid rgba(192, 85, 42, 0.15);
+          background-color: var(--color-bg);
+          border: 1px solid var(--color-accent-tint);
           border-radius: 5px;
           cursor: pointer;
+          color: var(--color-text-primary);
+          font-family: "Be Vietnam Pro", sans-serif;
 
           img {
             width: 16px;
@@ -201,7 +202,5 @@
         }
       }
     }
-
   }
-
 }

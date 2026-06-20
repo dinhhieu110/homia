@@ -4,7 +4,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #fff;
+  background-color: var(--color-bg);
   box-shadow: 0 0 0 transparent;
   transition: box-shadow 0.3s ease;
   display: flex;
@@ -14,7 +14,7 @@ nav {
   font-size: 20px;
 
   &.scrolled {
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--color-nav-shadow);
   }
 
   @include md {
@@ -47,9 +47,13 @@ nav {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-left: 8px;
 
     img {
       width: 30px;
+      filter: var(--logo-filter, none);
+      transition: filter 0.3s ease;
+      margin-bottom: 4px;
     }
 
     span {
@@ -64,26 +68,47 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: #fcf5f3;
+    gap: 6px;
+    background-color: var(--color-bg-secondary);
     height: 100%;
     padding-right: 8px;
+
+
+    @include sm {
+      justify-content: space-evenly;
+
+    }
 
     @include sm {
       background-color: transparent;
       padding-right: 0;
+      gap: 4px;
     }
+
 
     a {
       padding: 12px 24px;
       margin: 10px;
     }
 
+    // ── Theme switcher ───────────────────────────────────
+    .themeSwitcher {
+      @include sm {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
     // ── Language switcher ────────────────────────────────
     .langSwitcher {
-      margin-right: 8px;
-
       @include sm {
-        display: none;
+        padding: 6px 10px 6px 8px;
+        font-size: 11px;
+
+        svg {
+          width: 13px;
+          height: 13px;
+        }
       }
     }
 
@@ -114,9 +139,9 @@ nav {
           }
 
           &:hover {
-            border-color: #c0552a;
+            border-color: var(--color-accent);
             transform: scale(1.05);
-            box-shadow: 0 0 0 4px rgba(192, 85, 42, 0.15);
+            box-shadow: 0 0 0 4px var(--color-accent-avatar-ring);
           }
         }
 
@@ -124,7 +149,7 @@ nav {
           position: absolute;
           top: -3px;
           right: -3px;
-          background-color: #c0552a;
+          background-color: var(--color-accent);
           color: white;
           font-size: 10px;
           font-weight: 700;
@@ -134,7 +159,7 @@ nav {
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 2px solid #fcf5f3;
+          border: 2px solid var(--color-badge-border);
           pointer-events: none;
         }
       }
@@ -144,9 +169,9 @@ nav {
         position: absolute;
         top: calc(100% + 16px);
         right: 0;
-        background: white;
+        background: var(--color-popup-bg);
         border-radius: 14px;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
+        box-shadow: var(--color-popup-shadow);
         min-width: 210px;
         padding: 6px 0 8px;
         z-index: 200;
@@ -158,10 +183,10 @@ nav {
           right: 18px;
           width: 12px;
           height: 12px;
-          background: white;
+          background: var(--color-popup-bg);
           transform: rotate(45deg);
           border-radius: 2px 0 0 0;
-          box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: var(--color-popup-arrow-shadow);
         }
 
         .popupItem {
@@ -175,7 +200,7 @@ nav {
           border: none;
           cursor: pointer;
           font-size: 14px;
-          color: #2d2d2d;
+          color: var(--color-text-primary);
           text-align: left;
           font-family: "Be Vietnam Pro", sans-serif;
           transition: background-color 0.15s ease;
@@ -184,11 +209,11 @@ nav {
             width: 15px;
             height: 15px;
             flex-shrink: 0;
-            color: #aaa;
+            color: var(--color-text-subtle);
           }
 
           &:hover {
-            background-color: #f8f8f8;
+            background-color: var(--color-surface);
           }
 
           &.name {
@@ -196,45 +221,55 @@ nav {
             padding: 12px 16px 14px;
 
             svg:first-child {
-              color: #c0552a;
+              color: var(--color-accent);
             }
 
             .chevron {
               margin-left: auto;
-              color: #ccc;
+              color: var(--color-text-disabled);
               width: 13px;
               height: 13px;
             }
 
             &:hover {
-              background-color: #fff8f6;
+              background-color: var(--color-accent-bg);
+            }
+          }
+
+          &.password {
+            svg {
+              color: var(--color-accent);
+            }
+
+            &:hover {
+              background-color: var(--color-accent-bg);
             }
           }
 
           &.logout {
-            color: #d94f4f;
+            color: var(--color-error);
 
             svg {
-              color: #d94f4f;
+              color: var(--color-error);
             }
 
             &:hover {
-              background-color: #fff5f5;
+              background-color: var(--color-error-bg);
             }
           }
         }
 
         .popupDivider {
           height: 1px;
-          background-color: #f0f0f0;
+          background-color: var(--color-border-subtle);
           margin: 4px 0;
         }
       }
     }
 
     .register {
-      background: black;
-      color: white;
+      background: var(--color-register-bg);
+      color: var(--color-register-text);
     }
 
     .menuIcon {
@@ -255,7 +290,7 @@ nav {
       position: fixed;
       top: 0;
       right: -200%;
-      background: black;
+      background: #111;
       color: white;
       height: 100vh;
       width: 50%;

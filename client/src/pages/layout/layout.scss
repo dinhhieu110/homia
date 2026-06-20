@@ -21,5 +21,9 @@
 
   .content {
     min-height: calc(100vh - 100px);
+
+    @include md {
+      padding-top: 32px;
+    }
   }
 }

@@ -7,11 +7,6 @@
   .textContainer {
     flex: 3;
 
-    @include md {
-      // align-items: center;
-    }
-
-
     .wrapper {
       padding-right: 100px;
       display: flex;
@@ -29,7 +24,6 @@
         padding-top: 32px;
         gap: 24px;
       }
-
 
       .title {
         font-size: 64px;
@@ -49,12 +43,12 @@
         }
 
         .accent {
-          color: #c0552a;
+          color: var(--color-accent);
         }
       }
 
       .description {
-        color: #555;
+        color: var(--color-description);
         line-height: 1.7;
 
         @include sm {
@@ -67,7 +61,7 @@
         justify-content: space-between;
 
         .box {
-          border-top: 3px solid #c0552a;
+          border-top: 3px solid var(--color-accent);
           padding-top: 12px;
         }
 
@@ -86,7 +80,7 @@
         h2 {
           font-size: 20px;
           font-weight: 300;
-          color: #666;
+          color: var(--color-stat-sub);
 
           @include sm {
             font-size: 14px;
@@ -98,7 +92,7 @@
 
   .imageContainer {
     flex: 2;
-    background-color: #fcf5f3;
+    background-color: var(--color-bg-secondary);
     position: relative;
     display: flex;
     align-items: center;
@@ -119,5 +113,4 @@
       }
     }
   }
-
 }

@@ -108,7 +108,7 @@ const Footer = () => {
 
         <div className="footerBottom">
           <span>© {currentYear} Homia. {t("footer.copyright")}</span>
-          <span className="craft">Crafted with <span className="heart">♥</span> by Wilson Tran</span>
+          <span className="craft">Crafted by Wilson Tran</span>
           <div className="bottomLinks">
             <a href="/">{t("footer.policy")}</a>
             <span className="dot">·</span>

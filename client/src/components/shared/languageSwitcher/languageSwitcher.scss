@@ -3,14 +3,14 @@
   align-items: center;
   gap: 6px;
   padding: 7px 14px 7px 11px;
-  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border: 1.5px solid var(--color-border);
   border-radius: 999px;
   background: transparent;
   cursor: pointer;
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: #444;
+  color: var(--color-text-secondary);
   letter-spacing: 0.04em;
   transition: border-color 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease, transform 0.15s ease;
   white-space: nowrap;
@@ -20,7 +20,7 @@
     width: 16px;
     height: 16px;
     flex-shrink: 0;
-    color: #888;
+    color: var(--color-text-muted);
     transition: color 0.22s ease, transform 0.4s ease;
   }
 
@@ -32,14 +32,14 @@
   }
 
   &:hover {
-    border-color: #c0552a;
-    background: rgba(192, 85, 42, 0.06);
-    color: #c0552a;
-    box-shadow: 0 0 0 3px rgba(192, 85, 42, 0.1);
+    border-color: var(--color-accent);
+    background: var(--color-accent-bg);
+    color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-ring);
     transform: translateY(-1px);
 
     svg {
-      color: #c0552a;
+      color: var(--color-accent);
       transform: rotate(20deg);
     }
   }
