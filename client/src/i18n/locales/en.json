@@ -6,6 +6,8 @@
     "support": "Support",
     "login": "Login",
     "register": "Register",
+    "messages": "Messages",
+    "askAI": "Ask AI",
     "changePassword": "Change Password",
     "logout": "Logout"
   },
@@ -77,6 +79,19 @@
   "chat": {
     "messages": "Messages",
     "send": "Send"
+  },
+  "chatPage": {
+    "tabMessages": "Messages",
+    "placeholder": "Type a message..."
+  },
+  "aiChat": {
+    "tabAsk": "Ask AI",
+    "tabHistories": "Histories",
+    "placeholder": "Ask AI about real estate...",
+    "analysis": "Analysis",
+    "priceTrend": "Price Trend",
+    "emptyTitle": "Your report will appear here",
+    "emptyDesc": "Ask AI to analyze a market, compare areas, or forecast trends — the full report will be generated here."
   },
   "pin": {
     "bedrooms": "bedrooms"

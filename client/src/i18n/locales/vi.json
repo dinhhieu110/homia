@@ -7,6 +7,7 @@
     "login": "Đăng Nhập",
     "register": "Đăng Ký",
     "messages": "Tin nhắn",
+    "askAI": "Hỏi AI",
     "changePassword": "Đổi mật khẩu",
     "logout": "Đăng xuất"
   },
@@ -81,10 +82,16 @@
   },
   "chatPage": {
     "tabMessages": "Tin nhắn",
-    "tabAI": "AI Agent",
-    "placeholder": "Nhập tin nhắn...",
-    "aiPlaceholder": "Hỏi AI về bất động sản...",
-    "kpiTitle": "Phân tích thị trường"
+    "placeholder": "Nhập tin nhắn..."
+  },
+  "aiChat": {
+    "tabAsk": "Hỏi AI",
+    "tabHistories": "Lịch sử",
+    "placeholder": "Hỏi AI về bất động sản...",
+    "analysis": "Phân tích",
+    "priceTrend": "Xu hướng giá",
+    "emptyTitle": "Báo cáo của bạn sẽ hiện ở đây",
+    "emptyDesc": "Hỏi AI để phân tích thị trường, so sánh khu vực hoặc dự báo xu hướng — báo cáo đầy đủ sẽ được tạo tại đây."
   },
   "pin": {
     "bedrooms": "phòng ngủ"

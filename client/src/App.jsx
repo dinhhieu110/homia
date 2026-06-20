@@ -5,6 +5,7 @@ import Product from "./pages/product/Product"
 import Layout from "./pages/layout/Layout";
 import Profile from "./pages/profile/Profile";
 import ChatPage from "./pages/chat/ChatPage";
+import AIChatPage from "./pages/chat/AIChatPage";
 
 
 function App() {
@@ -35,6 +36,10 @@ function App() {
         {
           path: "/chat",
           element: <ChatPage />
+        },
+        {
+          path: "/ai-chat",
+          element: <AIChatPage />
         }
       ]
     },

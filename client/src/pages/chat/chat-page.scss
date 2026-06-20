@@ -1,0 +1,217 @@
+@use "../../responsive.scss" as *;
+
+.chatPage {
+  display: flex;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background-color: var(--color-bg);
+
+  .chatSidebar {
+    width: 300px;
+    min-width: 260px;
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+      width: 72px;
+      min-width: 72px;
+    }
+
+    .sidebarHeader {
+      padding: 18px 16px 14px;
+      border-bottom: 1px solid var(--color-border);
+
+      h2 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--color-text-primary);
+
+        @include md {
+          display: none;
+        }
+      }
+    }
+
+    .contactList {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+    }
+
+    .contactItem {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+
+      &:hover,
+      &.active {
+        background-color: var(--color-surface);
+      }
+
+      img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .contactInfo {
+        flex: 1;
+        min-width: 0;
+
+        @include md {
+          display: none;
+        }
+
+        .contactName {
+          display: block;
+          font-weight: 600;
+          font-size: 14px;
+          color: var(--color-text-primary);
+        }
+
+        .contactLast {
+          display: block;
+          font-size: 12px;
+          color: var(--color-text-muted);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-top: 2px;
+        }
+      }
+
+      .contactTime {
+        font-size: 11px;
+        color: var(--color-text-subtle);
+        flex-shrink: 0;
+
+        @include md {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .chatMain {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .chatHeader {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--color-border);
+
+      .headerUser {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        img {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        span {
+          font-weight: 600;
+          font-size: 15px;
+          color: var(--color-text-primary);
+        }
+      }
+    }
+
+    .chatMessages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .bubble {
+        max-width: 60%;
+        align-self: flex-start;
+
+        p {
+          background-color: var(--color-surface);
+          color: var(--color-text-primary);
+          padding: 10px 14px;
+          border-radius: 12px 12px 12px 4px;
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+        span {
+          display: block;
+          font-size: 11px;
+          color: var(--color-text-subtle);
+          margin-top: 4px;
+          padding: 0 4px;
+        }
+
+        &.own {
+          align-self: flex-end;
+
+          p {
+            background-color: var(--color-accent);
+            color: #fff;
+            border-radius: 12px 12px 4px 12px;
+          }
+
+          span {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .chatInput {
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      align-items: stretch;
+      min-height: 56px;
+
+      textarea {
+        flex: 1;
+        padding: 16px;
+        border: none;
+        outline: none;
+        resize: none;
+        background-color: var(--color-bg);
+        color: var(--color-text-primary);
+        font-family: "Be Vietnam Pro", sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+
+        &::placeholder {
+          color: var(--color-text-muted);
+        }
+      }
+
+      button {
+        padding: 0 28px;
+        background-color: var(--color-accent);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-family: "Be Vietnam Pro", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+}
